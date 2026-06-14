@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>TOTV PLUS — أفلام ومسلسلات وبث مباشر بلا حدود</title>
+  <meta name="description" content="TOTV PLUS تطبيق ترفيهي عربي لمشاهدة أحدث الأفلام والمسلسلات والبث المباشر بجودة عالية على الجوال والكمبيوتر والشاشات الذكية." />
+  <meta name="theme-color" content="#08080A" />
+
+  <!-- مشاركة على وسائل التواصل -->
+  <meta property="og:title" content="TOTV PLUS" />
+  <meta property="og:description" content="أفلام ومسلسلات وبث مباشر بلا حدود — حمّل التطبيق الآن." />
+  <meta property="og:type" content="website" />
+
+  <!-- الخطوط العربية -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ====================== شريط التنقّل ====================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="TOTV PLUS الصفحة الرئيسية">
+        <span class="brand__mark">TOTV</span><span class="brand__plus">+</span>
+      </a>
+
+      <nav class="nav__links" aria-label="التنقّل الرئيسي">
+        <a href="#trending">الأكثر مشاهدة</a>
+        <a href="#movies">أفلام</a>
+        <a href="#series">مسلسلات</a>
+        <a href="#live">مباشر</a>
+        <a href="#stars">النجوم</a>
+      </nav>
+
+      <a href="#download" class="btn btn--gold nav__cta">حمّل التطبيق</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ====================== الواجهة الرئيسية (Hero) ====================== -->
+    <section class="hero" id="hero">
+      <!-- جدار البوسترات يُملأ تلقائياً من قاعدة الأفلام -->
+      <div class="hero__wall" id="posterWall" aria-hidden="true"></div>
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow">منصّة الترفيه العربية</p>
+        <h1 class="hero__title">
+          كل ما يستحق المشاهدة،
+          <span class="gold-text">في مكان واحد.</span>
+        </h1>
+        <p class="hero__sub">
+          آلاف الأفلام والمسلسلات والقنوات المباشرة بجودة عالية —
+          تعمل على جوالك وحاسوبك وشاشة تلفازك الذكية بنفس السلاسة.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#download" class="btn btn--gold">ابدأ المشاهدة الآن</a>
+          <a href="#trending" class="btn btn--ghost">تصفّح المكتبة</a>
+        </div>
+
+        <ul class="hero__stats" id="heroStats">
+          <li><strong id="statMovies">—</strong><span>فيلم</span></li>
+          <li><strong id="statSeries">—</strong><span>مسلسل</span></li>
+          <li><strong>4K</strong><span>جودة عالية</span></li>
+          <li><strong>24/7</strong><span>بث مباشر</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- شريط شريط الفيلم الفاصل -->
+    <div class="filmstrip" role="presentation"></div>
+
+    <!-- ====================== الأكثر مشاهدة ====================== -->
+    <section class="rail-section" id="trending">
+      <div class="section-head">
+        <h2 class="section-title">الأكثر مشاهدة هذا الأسبوع</h2>
+        <p class="section-note">يتجدّد تلقائياً حسب أكثر الأعمال رواجاً.</p>
+      </div>
+      <div class="rail" data-rail="trending" aria-label="الأعمال الرائجة"></div>
+    </section>
+
+    <!-- ====================== أفلام ====================== -->
+    <section class="rail-section" id="movies">
+      <div class="section-head">
+        <h2 class="section-title">أحدث الأفلام</h2>
+        <p class="section-note">من الأكشن إلى الدراما — اختر ما يناسب مزاجك.</p>
+      </div>
+      <div class="rail" data-rail="movies" aria-label="قائمة الأفلام"></div>
+    </section>
+
+    <!-- ====================== مسلسلات ====================== -->
+    <section class="rail-section" id="series">
+      <div class="section-head">
+        <h2 class="section-title">مسلسلات رائجة</h2>
+        <p class="section-note">حلقات تتابعها بلا توقّف.</p>
+      </div>
+      <div class="rail" data-rail="series" aria-label="قائمة المسلسلات"></div>
+    </section>
+
+    <!-- ====================== مباشر ====================== -->
+    <section class="rail-section" id="live">
+      <div class="section-head">
+        <h2 class="section-title">
+          <span class="live-dot" aria-hidden="true"></span> يُعرض الآن — البث المباشر
+        </h2>
+        <p class="section-note">أعمال على الهواء ومحتوى يُبثّ في هذه الفترة.</p>
+      </div>
+      <div class="rail" data-rail="live" aria-label="المحتوى المباشر"></div>
+    </section>
+
+    <!-- ====================== النجوم ====================== -->
+    <section class="stars-section" id="stars">
+      <div class="section-head">
+        <h2 class="section-title">نجوم وممثلون</h2>
+        <p class="section-note">اضغط على أي نجم لقراءة سيرته الذاتية وأبرز أعماله.</p>
+      </div>
+      <div class="stars-grid" id="starsGrid" aria-label="قائمة النجوم"></div>
+    </section>
+
+    <div class="filmstrip" role="presentation"></div>
+
+    <!-- ====================== التحميل ====================== -->
+    <section class="download" id="download">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">متاح على كل أجهزتك</p>
+        <h2 class="section-title">حمّل TOTV PLUS</h2>
+        <p class="section-note">اختر جهازك واتبع الخطوات — التثبيت لا يستغرق دقيقة.</p>
+      </div>
+
+      <div class="dl-grid">
+        <!-- أندرويد -->
+        <article class="dl-card">
+          <div class="dl-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34"><path fill="currentColor" d="M17.6 9.48l1.84-3.18a.4.4 0 00-.69-.4l-1.86 3.23a11.4 11.4 0 00-9.78 0L5.25 5.9a.4.4 0 10-.69.4L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52M7 15.25a1 1 0 110-2 1 1 0 010 2m10 0a1 1 0 110-2 1 1 0 010 2"/></svg>
+          </div>
+          <h3>أندرويد</h3>
+          <p>للهواتف والأجهزة اللوحية العاملة بنظام أندرويد.</p>
+          <div class="dl-code">
+            <span class="dl-code__label">رمز Downloader</span>
+            <span class="dl-code__value" id="codeAndroid">2606779</span>
+          </div>
+          <a class="btn btn--gold btn--block" id="btnAndroid" href="#" target="_blank" rel="noopener">تحميل لأندرويد</a>
+          <button class="dl-copy" data-copy="androidCode">نسخ الرمز</button>
+        </article>
+
+        <!-- آيفون -->
+        <article class="dl-card dl-card--feature">
+          <div class="dl-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34"><path fill="currentColor" d="M16.36 12.78c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.69 2.36 2.9 2.31 1.16-.05 1.6-.75 3-.75 1.39 0 1.79.75 3.01.72 1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.44-3.66M14.1 6.24c.64-.78 1.07-1.85.95-2.94-.92.04-2.04.62-2.7 1.39-.59.68-1.11 1.78-.97 2.83 1.03.08 2.08-.52 2.72-1.28"/></svg>
+          </div>
+          <h3>آيفون و آيباد</h3>
+          <p>متوفّر مباشرةً على متجر آبل بضغطة واحدة.</p>
+          <div class="dl-code dl-code--store">
+            <span class="dl-code__label">App Store</span>
+            <span class="dl-code__value">جاهز للتثبيت</span>
+          </div>
+          <a class="btn btn--gold btn--block" id="btnIos" href="#" target="_blank" rel="noopener">تحميل من App Store</a>
+          <span class="dl-card__tag">الأكثر طلباً</span>
+        </article>
+
+        <!-- الشاشات الذكية -->
+        <article class="dl-card">
+          <div class="dl-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34"><path fill="currentColor" d="M21 3H3a2 2 0 00-2 2v11a2 2 0 002 2h7v2H7v2h10v-2h-3v-2h7a2 2 0 002-2V5a2 2 0 00-2-2m0 13H3V5h18z"/></svg>
+          </div>
+          <h3>الشاشات الذكية</h3>
+          <p>لأجهزة Fire TV و Android TV عبر تطبيق Downloader.</p>
+          <div class="dl-code">
+            <span class="dl-code__label">رمز Downloader</span>
+            <span class="dl-code__value" id="codeTv">2606779</span>
+          </div>
+          <a class="btn btn--gold btn--block" id="btnTv" href="#" target="_blank" rel="noopener">تحميل للتلفاز</a>
+          <button class="dl-copy" data-copy="tvCode">نسخ الرمز</button>
+        </article>
+      </div>
+
+      <!-- خطوات التثبيت على التلفاز -->
+      <div class="dl-steps">
+        <h3 class="dl-steps__title">التثبيت على الشاشة الذكية بثلاث خطوات</h3>
+        <ol class="dl-steps__list">
+          <li><span>١</span> ثبّت تطبيق <strong>Downloader</strong> من متجر جهازك.</li>
+          <li><span>٢</span> افتحه وأدخل الرمز <strong>2606779</strong> ثم اضغط <em>Go</em>.</li>
+          <li><span>٣</span> اختر <strong>تثبيت</strong> بعد انتهاء التنزيل، وابدأ المشاهدة.</li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== التذييل ====================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="brand brand--sm" href="#top">
+        <span class="brand__mark">TOTV</span><span class="brand__plus">+</span>
+      </a>
+      <p class="footer__tag">أفلام ومسلسلات وبث مباشر بلا حدود.</p>
+      <nav class="footer__links" aria-label="روابط التذييل">
+        <a href="#movies">أفلام</a>
+        <a href="#series">مسلسلات</a>
+        <a href="#live">مباشر</a>
+        <a href="#stars">النجوم</a>
+        <a href="#download">تحميل</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> TOTV PLUS — جميع الحقوق محفوظة. بيانات الأعمال من The Movie Database.</p>
+    </div>
+  </footer>
+
+  <!-- ====================== نافذة التفاصيل ====================== -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="تفاصيل العمل">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__panel" id="modalPanel" tabindex="-1">
+      <button class="modal__close" data-close aria-label="إغلاق">✕</button>
+      <div class="modal__body" id="modalBody"><!-- يُملأ ديناميكياً --></div>
+    </div>
+  </div>
+
+  <!-- تنبيه النسخ -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
